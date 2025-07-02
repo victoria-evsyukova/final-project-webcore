@@ -1,0 +1,205 @@
+$color-9: #B5B6BC;
+$color-10: #8b8888;
+$color-11: #7E7E82;
+$color-12: #1B1C21;
+
+@mixin swiper-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+    height: 72px;
+    border: 1px solid $color-3;
+    border-radius: 6px;
+    padding-left: 16px;
+    background-color: $color-1;
+    cursor: pointer;
+}
+
+@mixin swiper-dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $color-2;
+    background-color: transparent;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+
+.info {
+    @media(min-width: $screen-sm) { 
+        background: linear-gradient(to left, #ffffff, #f8f8f8);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+        padding-top: 16px;
+        padding-left: 16px;
+        padding-bottom: 16px;
+        border-top: 1px solid $color-4;
+        width: 100%;
+    }
+    
+    @media(min-width: $screen-md) {
+        padding-left: 24px; 
+    }
+}
+
+
+.swiper {
+    @media(min-width: $screen-sm) {
+        overflow: visible !important;
+        scrollbar-width: none !important;
+        padding-right: 40px;
+
+        &__item {
+            @include swiper-item;
+            padding-right: 16px;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        &__dropdown {
+            @include swiper-dropdown;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        &-wrapper {
+            display: flex;
+            background-color: $color-5;
+            padding-left: 16px;
+            padding-right: 24px;
+            overflow-x: auto;
+            white-space: nowrap;
+            flex-wrap: nowrap;
+            scrollbar-width: none;
+            column-gap: 16px;
+            padding-top: 20px;
+
+            &-third {
+                height: 200px;
+                padding-right: 16px;
+            }
+
+        }
+        
+        &-pagination {
+            --swiper-pagination-color: #B5B6BC;
+            --swiper-pagination-left: auto;
+            --swiper-pagination-right: 8px;
+            --swiper-pagination-bottom: -38px;
+            --swiper-pagination-top: auto;
+            --swiper-pagination-fraction-color: inherit;
+            --swiper-pagination-progressbar-bg-color: rgba( 0, 0, 0, 0.25);
+            --swiper-pagination-progressbar-size: 4px;
+            --swiper-pagination-bullet-size: 8px;
+            --swiper-pagination-bullet-width: 10px;
+            --swiper-pagination-bullet-height: 10px;
+            --swiper-pagination-bullet-inactive-color: #8b8888;
+            --swiper-pagination-bullet-inactive-opacity: 0.2;
+            --swiper-pagination-bullet-opacity: 1;
+            --swiper-pagination-bullet-horizontal-gap: 4px;
+            --swipper-pagination-scrollbar-width: none;
+
+            &-3 {
+                --swiper-pagination-bottom: -38px;
+
+            }
+        }
+
+        &-slide {
+            overflow: visible;
+            min-width: 240px;
+            scrollbar-width: none;
+        }
+
+        &-paginaton {
+            scrollbar-width: none;
+        }
+
+        &__second {
+            height: 160px;
+            font-size: 16px;
+            align-items: start;
+            padding-top: 20px;
+            white-space: wrap;
+        }
+
+        &__second-dropdown {
+            margin-top: 85px
+        }
+
+        &__third {
+            display: block;
+            position: relative;
+            width: 260px;
+            height: 200px;
+            font-size: 16px;
+            align-items: start;
+            padding-top: 17px;
+            
+        }
+
+        &__text {
+            margin-bottom: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16px;
+            color: $color-11;
+        }
+
+        &__description {
+            margin-bottom: 15px;
+            white-space: wrap;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0.2px;
+            color: $color-12;
+        }
+
+        &__button-dropdown {
+            position: absolute;
+            display: flex;
+            justify-content: space-around;
+            top: 150px;
+            left: 125px;
+            width: 115px;
+            height: 32px;
+            border-radius: 16px;
+            background-color: $color-2;
+            color: $color-1;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: -0.15px;
+            text-transform: uppercase;
+        }
+
+        &-3 {
+            padding-right: 40px;
+        }
+
+    }
+
+    @media(min-width: $screen-md) {
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+

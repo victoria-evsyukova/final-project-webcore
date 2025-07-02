@@ -1,0 +1,54 @@
+@import "./header.scss";
+@import "./main-info.scss";
+@import "./swipers.scss";
+@import "./footer.scss";
+@import "./stylesheet.scss";
+@import "../scss/carousel.scss";
+@import "../scss/side-menu.scss";
+@import "../scss/modal-windows.scss";
+// @import "./fonts.scss";
+
+
+$bgColor: #24292e;
+$text: #fff;
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    box-sizing: border-box; 
+}
+
+
+body {
+  font-family: "TT Lakes", sans-serif;
+  background-color: $color-1;
+  overflow-x: hidden;
+    @media (min-width: $screen-lg) {
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+html {
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.container {
+  @media(min-width: $screen-lg) {
+    display: flex;
+  }
+}
+
+
+.opacity {
+   opacity: 0.999;
+   visibility: visible;
+   transition: opacity 0.5s;
+}
+
+.layout {
+  background-color: $color-5;
+}

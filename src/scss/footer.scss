@@ -1,0 +1,110 @@
+.description{
+    
+    @media(min-width: $screen-sm) {
+        margin-top: 50px;
+        padding-left: 16px;
+        padding-bottom: 3px;
+        margin-bottom: 40px;
+    }
+
+    &__first {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        font-weight: 400;
+        color: $color-12;
+        margin-bottom: 20px;
+    }
+
+    &__second {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $color-12;
+        position: relative;
+        display: flex;
+        column-gap: 10px;
+        position: relative; 
+        transition: transform 0.5s;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+    
+    &__second img {
+        position: absolute;
+        top: 7px;
+        left: 310px;
+        transition: transform 0.5s;
+
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+
+    @media (min-width: $screen-md) {
+        width: 421px;
+        margin-left: 24px;
+        padding-left: 0;
+    }
+
+}
+
+
+
+
+
+.footer {
+
+    @media(min-width: $screen-sm) {
+        margin-top: 30px;
+        padding-left: 16px;
+        border-top: 1px solid #D9FFF5;
+        padding-top: 30px;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
+        text-align: center;
+        color: #7E7E82;
+        margin-bottom: 40px;
+        margin-right: 20px;
+    }
+
+    @media(min-width: $screen-md) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-right: 24px;
+        margin-bottom: 20px;
+        padding-left: 24px;
+        padding-top: 30px;
+    }
+}
+
+.footer p {
+    @media(min-width: $screen-sm) {
+        margin-bottom: 15px;
+    }
+}
+
+
+.footer p:first-child{
+    @media(min-width: $screen-md) {
+        text-align: left;
+    }
+}
+
+.footer p:nth-child(2){
+    @media(min-width: $screen-md) {
+        text-align: left;
+    }
+}
+
+.footer p:last-child{
+    @media(min-width: $screen-md) {
+        text-align: right;
+    }
+}
+

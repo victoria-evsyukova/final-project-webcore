@@ -1,0 +1,32 @@
+@mixin font-face($name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $name;
+    src: url('#{$path}.eot');
+    src: url('#{$path}.eot?#iefix') format('embedded-opentype'),
+         url('#{$path}.woff2') format('woff2'),
+         url('#{$path}.woff') format('woff'),
+         url('#{$path}.ttf') format('truetype');
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+@include font-face('TT Lakes', '../fonts/TTLakes-Thin', 100);
+@include font-face('TT Lakes', '../fonts/TTLakes-ThinItalic', 100, italic);
+@include font-face('TT Lakes', '../fonts/TTLakes-ExtraLight', 200);
+@include font-face('TT Lakes', '../fonts/TTLakes-ExtraLightItalic', 200, italic);
+@include font-face('TT Lakes', '../fonts/TTLakes-Light', 300);
+@include font-face('TT Lakes', '../fonts/TTLakes-LightItalic', 300, italic);
+@include font-face('TT Lakes', '../fonts/TTLakes-Regular', 400);
+@include font-face('TT Lakes', '../fonts/TTLakes-Italic', 400, italic);
+@include font-face('TT Lakes', '../fonts/TTLakes-Medium', 500);
+@include font-face('TT Lakes', '../fonts/TTLakes-MediumItalic', 500, italic);
+@include font-face('TT Lakes', '../fonts/TTLakes-DemiBold', 600);
+@include font-face('TT Lakes', '../fonts/TTLakes-DemiBoldItalic', 600, italic);
+@include font-face('TT Lakes', '../fonts/TTLakes-Bold', 700);
+@include font-face('TT Lakes', '../fonts/TTLakes-BoldItalic', 700, italic);
+@include font-face('TT Lakes', '../fonts/TTLakes-ExtraBold', 800);
+@include font-face('TT Lakes', '../fonts/TTLakes-ExtraBoldItalic', 800, italic);
+@include font-face('TT Lakes', '../fonts/TTLakes-Black', 900);
+@include font-face('TT Lakes', '../fonts/TTLakes-BlackItalic', 900, italic);
